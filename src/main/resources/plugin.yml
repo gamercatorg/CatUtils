@@ -1,8 +1,12 @@
 name: CatUtils
 main: io.github.gamer4life1.CatUtils.Main
-version: 1.0
+version: 1.1
 commands:
   heal:
     description: Heals the player
     permission: catutils.heal
     usage: /heal
+  feed:
+    description: Feeds the player
+    permission: catutils.feed
+    usage: /feed

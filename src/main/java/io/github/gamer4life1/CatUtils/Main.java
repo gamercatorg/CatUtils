@@ -6,6 +6,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("CatUtils has been enabled!");
+        this.getCommand("heal").setExecutor(new HealCommand());
     }
     @Override
     public void onDisable() {

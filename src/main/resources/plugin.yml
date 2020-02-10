@@ -14,3 +14,7 @@ commands:
     description: Toggles fly mode
     permission: catutils.fly
     usage: /fly
+  tl:
+    description: Adds levitation efect
+    permission: catutils.levitation
+    usage: /tl

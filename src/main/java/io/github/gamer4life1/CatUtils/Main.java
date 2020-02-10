@@ -9,6 +9,7 @@ public class Main extends JavaPlugin {
         this.getCommand("heal").setExecutor(new HealCommand());
         this.getCommand("feed").setExecutor(new FeedCommand());
         this.getCommand("fly").setExecutor(new FlyCommand());
+        this.getCommand("tl").setExecutor(new LevitationCommand());
     }
     @Override
     public void onDisable() {

@@ -6,7 +6,7 @@
 
     <groupId>io.github.gamer4life1</groupId>
     <artifactId>CatUtils</artifactId>
-    <version>1.1</version>
+    <version>1.2-beta1</version>
 
     <repositories>
         <repository>
@@ -32,8 +32,8 @@
     </dependencies>
 
     <properties>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
 </project>

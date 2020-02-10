@@ -8,6 +8,7 @@ public class Main extends JavaPlugin {
         getLogger().info("CatUtils has been enabled!");
         this.getCommand("heal").setExecutor(new HealCommand());
         this.getCommand("feed").setExecutor(new FeedCommand());
+        this.getCommand("fly").setExecutor(new FlyCommand());
     }
     @Override
     public void onDisable() {

@@ -16,7 +16,7 @@ public class FlyCommand implements CommandExecutor {
                 } else {
                     p.setAllowFlight(false);
                 }
-            }
+            } else commandSender.sendMessage("You need to be a player to do that!");
         }
         return false;
     }

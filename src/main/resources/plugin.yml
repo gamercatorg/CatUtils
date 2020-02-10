@@ -1,6 +1,6 @@
 name: CatUtils
 main: io.github.gamer4life1.CatUtils.Main
-version: 1.1
+version: v1.2
 commands:
   heal:
     description: Heals the player
@@ -10,3 +10,7 @@ commands:
     description: Feeds the player
     permission: catutils.feed
     usage: /feed
+  fly:
+    description: Toggles fly mode
+    permission: catutils.fly
+    usage: /fly

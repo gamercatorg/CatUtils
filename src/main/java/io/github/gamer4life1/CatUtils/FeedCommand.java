@@ -12,7 +12,7 @@ public class FeedCommand implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("feed")) {
             if (commandSender instanceof Player) {
                 Player p = (Player) commandSender;
-                p.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 255, 255));
+                p.setFoodLevel(20);
             } else {
                 commandSender.sendMessage("You need to be a player to do that!");
             }

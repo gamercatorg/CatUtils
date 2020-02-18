@@ -35,5 +35,12 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>ghq-artifactory-primary-0-snapshots</name>
+            <url>https://ghq.jfrog.io/ghq/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

@@ -6,7 +6,7 @@
 
     <groupId>io.github.gamer4life1</groupId>
     <artifactId>CatUtils</artifactId>
-    <version>1.2-beta1</version>
+    <version>1.2-SNAPSHOT</version>
 
     <repositories>
         <repository>
@@ -35,12 +35,12 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
-    <distributionManagement>
+    <!-- <distributionManagement>
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>ghq-artifactory-primary-0-snapshots</name>
+            <id>central</id>
+            <name>jfrog</name>
             <url>https://ghq.jfrog.io/ghq/libs-snapshot-local</url>
         </snapshotRepository>
-    </distributionManagement>
+    </distributionManagement> -->
 
 </project>

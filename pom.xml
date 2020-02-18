@@ -6,7 +6,7 @@
 
     <groupId>io.github.gamer4life1</groupId>
     <artifactId>CatUtils</artifactId>
-    <version>1.2</version>
+    <version>1.2-SNAPSHOT</version>
 
     <repositories>
         <repository>

@@ -42,13 +42,11 @@
             <name>ghq-artifactory-primary-0-snapshots</name>
             <url>${env.MAVEN_REPO_URL}/libs-snapshot</url>
         </snapshotRepository> -->
-        <distributionManagement>
-            <repository>
-                <id>central</id>
-                <name>ghq-artifactory-primary-0-releases</name>
-                <url>${env.MAVEN_REPO_URL}/libs-release-local</url>
-            </repository>
-        </distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>ghq-artifactory-primary-0-releases</name>
+            <url>${env.MAVEN_REPO_URL}/libs-release-local</url>
+        </repository>
     </distributionManagement>
 
 </project>

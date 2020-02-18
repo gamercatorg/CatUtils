@@ -37,11 +37,11 @@
     </properties>
 
     <distributionManagement>
-        <!-- <snapshotRepository>
-            <id>snaps</id>
+        <snapshotRepository>
+            <id>snapshots</id>
             <name>ghq-artifactory-primary-0-snapshots</name>
-            <url>${env.MAVEN_REPO_URL}/libs-snapshot</url>
-        </snapshotRepository> -->
+            <url>${env.MAVEN_REPO_URL}/libs-snapshot-local</url>
+        </snapshotRepository>
         <repository>
             <id>central</id>
             <name>ghq-artifactory-primary-0-releases</name>

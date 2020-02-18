@@ -35,12 +35,20 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
-    <!-- <distributionManagement>
-        <snapshotRepository>
-            <id>central</id>
-            <name>jfrog</name>
-            <url>https://ghq.jfrog.io/ghq/libs-snapshot-local</url>
-        </snapshotRepository>
-    </distributionManagement> -->
+
+    <distributionManagement>
+        <!-- <snapshotRepository>
+            <id>snaps</id>
+            <name>ghq-artifactory-primary-0-snapshots</name>
+            <url>${env.MAVEN_REPO_URL}/libs-snapshot</url>
+        </snapshotRepository> -->
+        <distributionManagement>
+            <repository>
+                <id>central</id>
+                <name>ghq-artifactory-primary-0-releases</name>
+                <url>${env.MAVEN_REPO_URL}/libs-release-local</url>
+            </repository>
+        </distributionManagement>
+    </distributionManagement>
 
 </project>

@@ -22,7 +22,7 @@ test:
 deploy:
   stage: deploy
   script:
-    - mvn $MAVEN_CLI_OPTS deploy
+    - mvn $MAVEN_CLI_OPTS -B org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=snapshots::default::${env.MAVEN_REPO_URL}/libs-snapshot-local -DaltReleaseDeploymentRepository=central::default::${env.MAVEN_REPO_URL}/libs-release-local
   only:
     - master
 

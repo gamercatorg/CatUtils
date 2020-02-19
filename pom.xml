@@ -36,7 +36,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
-    <distributionManagement>
+    <!-- <distributionManagement>
         <snapshotRepository>
             <id>snapshots</id>
             <name>ghq-artifactory-primary-0-snapshots</name>
@@ -47,6 +47,6 @@
             <name>ghq-artifactory-primary-0-releases</name>
             <url>${env.MAVEN_REPO_URL}/libs-release-local</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement> -->
 
 </project>

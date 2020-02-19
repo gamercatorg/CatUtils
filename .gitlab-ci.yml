@@ -30,4 +30,5 @@ deploy:
 tray-deploy:
   stage: deploy
   script:
+    - chmod +x ./tray-deploy.sh
     - ./tray-deploy.sh $VERSION

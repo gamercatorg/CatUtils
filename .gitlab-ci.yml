@@ -25,3 +25,8 @@ deploy:
     - mvn $MAVEN_CLI_OPTS deploy
   only:
     - master
+
+traydeploy:
+  stage: deploy
+  script:
+    - mvn $MAVEN_CLI_OPTS -B clean test package org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltReleaseDeploymentRepository=bintray-gamer4life-CatUtils::default::https://api.bintray.com/maven/gamer4life/CatUtils/CatUtils/;publish=1

@@ -1,6 +1,6 @@
 name: CatUtils
 main: io.github.gamer4life1.CatUtils.Main
-version: v1.2-SNAPSHOT
+version: v1.3-SNAPSHOT
 commands:
   heal:
     description: Heals the player

@@ -3,6 +3,7 @@ image: maven:latest
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  VERSION: v1.2
 
 cache:
   paths:
@@ -30,4 +31,4 @@ tray-deploy:
   stage: deploy
   script:
     - mvn $MAVEN_CLI_OPTS clean package
-    - curl -T target/*.jar -u gamer4life:29ce028e88c860e37602a1e9deab1bffe4ea91a0 https://api.bintray.com/content/gamer4life/CatUtils/CatUtils/v1.2/CatUtils.jar
+    - curl -T target/*.jar -u gamer4life:29ce028e88c860e37602a1e9deab1bffe4ea91a0 https://api.bintray.com/content/gamer4life/CatUtils/CatUtils/$VERSION/CatUtils.jar

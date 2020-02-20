@@ -1,5 +1,8 @@
 image: maven:latest
 
+before_script:
+  - export M2_HOME=/usr/share/maven
+
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"

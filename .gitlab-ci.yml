@@ -32,8 +32,8 @@ tray-deploy:
   stage: deploy
   script:
     - curl -fL https://getcli.jfrog.io | sh
-    - jfrog rt c --interactive=false --url='https://ghq.jfrog.io/ghq' --username='deploy-bot' --password='meowcatnip'
-    - jfrog rt mvn "clean install" --build-name=CIBuild --build-number=$BUILD_NUM
-    - jfrog rt bp CIBuild 1
+    - ./jfrog rt c --interactive=false --url='https://ghq.jfrog.io/ghq' --username='deploy-bot' --password='meowcatnip'
+    - ./jfrog rt mvn "clean install" --build-name=CIBuild --build-number=$BUILD_NUM
+    - ./jfrog rt bp CIBuild 1
     - chmod +x ./tray-deploy.sh
     - ./tray-deploy.sh $VERSION

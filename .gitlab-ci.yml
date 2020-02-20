@@ -6,8 +6,7 @@ before_script:
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-  VERSION: v1.3-beta
-  BUILD_NUM: 1
+  VERSION: v1.3.4
 
 cache:
   paths:

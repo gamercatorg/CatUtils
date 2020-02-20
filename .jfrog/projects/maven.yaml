@@ -1,0 +1,6 @@
+version: 1
+type: maven
+deployer:
+  serverId: ghq
+  snapshotRepo: libs-snapshot
+  releaseRepo: libs-release

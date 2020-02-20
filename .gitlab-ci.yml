@@ -34,10 +34,14 @@ deploy:
 tray-deploy:
   stage: deploy
   script:
+    - chmod +x ./tray-deploy.sh
+    - ./tray-deploy.sh $VERSION
+
+jfrog-deploy:
+  stage: deploy
+  script:
     - curl -fL https://getcli.jfrog.io | sh
     - ./jfrog rt c ghq --interactive=false --url='https://ghq.jfrog.io/ghq/' --user='deploy-bot' --password='meowcatnip'
     - ./jfrog rt mvn "clean install" --build-name CIBuild --build-number $CI_JOB_ID
     - ./jfrog rt bce CIBuild $CI_JOB_ID
     - ./jfrog rt bp CIBuild $CI_JOB_ID
-    - chmod +x ./tray-deploy.sh
-    - ./tray-deploy.sh $VERSION

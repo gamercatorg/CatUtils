@@ -4,6 +4,7 @@ variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
   VERSION: v1.3-beta
+  BUILD_NUM: 1
 
 cache:
   paths:
@@ -30,5 +31,9 @@ deploy:
 tray-deploy:
   stage: deploy
   script:
+    - curl -fL https://getcli.jfrog.io | sh
+    - jfrog rt c --interactive=false --url='https://ghq.jfrog.io/ghq' --username='deploy-bot' --password='meowcatnip'
+    - jfrog rt mvn "clean install" --build-name=CIBuild --build-number=$BUILD_NUM
+    - jfrog rt bp CIBuild 1
     - chmod +x ./tray-deploy.sh
     - ./tray-deploy.sh $VERSION

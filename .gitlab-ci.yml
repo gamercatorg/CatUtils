@@ -33,8 +33,8 @@ deploy:
 tray-deploy:
   stage: deploy
   script:
-    - chmod +x ./tray-deploy.sh
-    - ./tray-deploy.sh $VERSION
+    - chmod +x ./scripts/tray-deploy.sh
+    - ./scripts/tray-deploy.sh $VERSION
 
 jfrog-deploy:
   stage: deploy

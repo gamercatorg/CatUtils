@@ -39,6 +39,7 @@ public class FlyCommand implements CommandExecutor {
                     }
                 } else {
                     commandSender.sendMessage(ChatColor.RED + "The player " + args[0] + " is not online. Please try again...");
+                    return false;
                 }
 
             }

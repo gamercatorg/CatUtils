@@ -44,3 +44,8 @@ jfrog-deploy:
     - ./jfrog rt mvn "clean install" --build-name CIBuild --build-number $CI_JOB_ID
     - ./jfrog rt bce CIBuild $CI_JOB_ID
     - ./jfrog rt bp CIBuild $CI_JOB_ID
+
+central-deploy:
+  stage: deploy
+  script:
+    - mvn $MAVEN_CLI_OPTS -P release --batch-mode -B clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=ossrh::default::https://oss.sonatype.org/content/repositories/snapshots -DaltReleaseDeploymentRepository=ossrh::default::https://oss.sonatype.org/service/local/staging/deploy/maven2/

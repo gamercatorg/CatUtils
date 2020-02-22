@@ -1,4 +1,4 @@
-package io.github.gamer4life1.CatUtils;
+package io.github.gamercatorg.CatUtils;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

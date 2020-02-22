@@ -27,7 +27,7 @@ test:
 deploy:
   stage: deploy
   script:
-    - mvn $MAVEN_CLI_OPTS --batch-mode -B clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=snapshots::default::${MAVEN_REPO_URL}/libs-snapshot-local -DaltReleaseDeploymentRepository=central::default::${env.MAVEN_REPO_URL}/libs-release-local
+    - mvn $MAVEN_CLI_OPTS --batch-mode -B clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=snapshots::default::${MAVEN_REPO_URL}/libs-snapshot-local -DaltReleaseDeploymentRepository=central::default::${MAVEN_REPO_URL}/libs-release-local
   only:
     - master
 

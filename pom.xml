@@ -29,20 +29,18 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
-    <distributionManagement>
+    <!-- <distributionManagement>
         <snapshotRepository>
             <id>snapshots</id>
             <name>ghq-artifactory-primary-0-snapshots</name>
-            <!--suppress UnresolvedMavenProperty -->
             <url>${env.MAVEN_REPO_URL}/libs-snapshot-local</url>
         </snapshotRepository>
         <repository>
             <id>central</id>
             <name>ghq-artifactory-primary-0-releases</name>
-            <!--suppress UnresolvedMavenProperty -->
             <url>${env.MAVEN_REPO_URL}/libs-release-local</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement> -->
     <build>
         <plugins>
             <plugin>
@@ -81,7 +79,7 @@
                     </execution>
                 </executions>
             </plugin> -->
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.5</version>
@@ -94,7 +92,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>

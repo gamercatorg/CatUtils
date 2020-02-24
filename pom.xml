@@ -6,7 +6,8 @@
    <version>1.3.5-SNAPSHOT</version>
    <scm>
        <connection>git:git:https://github.com/gamercatorg/catutils.git</connection>
-   </scm>
+     <tag>1.3.5</tag>
+  </scm>
    <repositories>
       <repository>
          <id>spigotmc-repo</id>

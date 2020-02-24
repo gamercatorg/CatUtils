@@ -2,9 +2,9 @@ image: maven:latest
 
 before_script:
   - export M2_HOME=/usr/share/maven
-  - gpg2 -v --import <(echo "$GPG_KEY")
+  - gpg -v --import <(echo "$GPG_KEY")
   - export GPG_TTY=$(tty)
-  - gpg2 --batch --allow-secret-key-import --import <(echo "$GPG_PRIVATE_KEY")
+  - gpg --batch --allow-secret-key-import --import <(echo "$GPG_PRIVATE_KEY")
 
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"

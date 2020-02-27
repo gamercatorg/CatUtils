@@ -7,9 +7,9 @@ before_script:
   - gpg --batch --allow-secret-key-import --import <(echo "$GPG_PRIVATE_KEY")
 
 variables:
-  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
-  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -Dsettings.security=.m2/settings-security.xml"
-  VERSION: v1.3.5
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -Dsettings.security=.m2/settings-security.xml"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  VERSION: v1.3.6
 
 cache:
   paths:

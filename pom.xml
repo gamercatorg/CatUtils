@@ -59,6 +59,12 @@
             <url>${env.MAVEN_REPO_URL}/libs-release-local</url>
         </repository>
     </distributionManagement> -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
    <build>
       <plugins>
          <plugin>

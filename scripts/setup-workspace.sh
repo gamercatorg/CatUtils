@@ -3,5 +3,5 @@ git pull
 git pull lab master
 npm install -g jfrog-cli-go
 gpg --import private.asc
-git config --config user.signingkey 76C07A52ECF60538
+git config --global user.signingkey 76C07A52ECF60538
 git config --global commit.gpgsign true

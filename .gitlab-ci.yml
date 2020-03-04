@@ -26,12 +26,12 @@ test:
   script:
     - mvn $MAVEN_CLI_OPTS test
 
-deploy:
-  stage: deploy
-  script:
-    - mvn $MAVEN_CLI_OPTS --batch-mode -B clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=snapshots::default::${MAVEN_REPO_URL}/libs-snapshot-local -DaltReleaseDeploymentRepository=central::default::${MAVEN_REPO_URL}/libs-release-local
-  only:
-    - master
+# deploy:
+#   stage: deploy
+#   script:
+#     - mvn $MAVEN_CLI_OPTS --batch-mode -B clean install org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=snapshots::default::${MAVEN_REPO_URL}/libs-snapshot-local -DaltReleaseDeploymentRepository=central::default::${MAVEN_REPO_URL}/libs-release-local
+#   only:
+#     - master
 
 tray-deploy:
   stage: deploy
@@ -39,14 +39,14 @@ tray-deploy:
     - chmod +x ./scripts/tray-deploy.sh
     - ./scripts/tray-deploy.sh $VERSION
 
-jfrog-deploy:
-  stage: deploy
-  script:
-    - curl -fL https://getcli.jfrog.io | sh
-    - ./jfrog rt c ghq --interactive=false --url='https://ghq.jfrog.io/ghq/' --user='deploy-bot' --password='meowcatnip'
-    - ./jfrog rt mvn "${MAVEN_CLI_OPTS} clean install" --build-name CIBuild --build-number $CI_JOB_ID
-    - ./jfrog rt bce CIBuild $CI_JOB_ID
-    - ./jfrog rt bp CIBuild $CI_JOB_ID
+# jfrog-deploy:
+#   stage: deploy
+#   script:
+#     - curl -fL https://getcli.jfrog.io | sh
+#     - ./jfrog rt c ghq --interactive=false --url='https://ghq.jfrog.io/ghq/' --user='deploy-bot' --password='meowcatnip'
+#     - ./jfrog rt mvn "${MAVEN_CLI_OPTS} clean install" --build-name CIBuild --build-number $CI_JOB_ID
+#     - ./jfrog rt bce CIBuild $CI_JOB_ID
+#     - ./jfrog rt bp CIBuild $CI_JOB_ID
 
 central-deploy:
   stage: deploy

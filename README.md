@@ -1,4 +1,6 @@
 [![Build Status](https://ci.codemc.io/buildStatus/icon?job=gamer4life1%2FCatUtils)](https://ci.codemc.io/job/gamer4life1/job/CatUtils/)
+[![javadoc](https://javadoc.io/badge2/io.github.gamercatorg/CatUtils/javadoc.svg)](https://javadoc.io/doc/io.github.gamercatorg/CatUtils)
+
 
 # CatUtils
 

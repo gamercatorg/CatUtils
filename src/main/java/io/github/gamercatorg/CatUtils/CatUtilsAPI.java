@@ -9,7 +9,7 @@ import net.md_5.bungee.api.ChatColor;
 
 /** Handles all functions.
  * @author GamerCat Meow
- * @version 1.7
+ * @version %I%, %G%
  * @since 1.6
 */
 public class CatUtilsAPI {
@@ -84,5 +84,36 @@ public class CatUtilsAPI {
 
             }
         return false;
+    }
+
+    /** Handles the heal command.
+     * @author GamerCat Meow
+     * @param commandSender the command sender
+     * @param args the args
+     * @return boolean
+     */
+    public static boolean healPlayer(CommandSender commandSender, String[] args) {
+        if (commandSender instanceof Player && args.length == 0) {
+                Player p = (Player) commandSender;
+                p.setHealth(20);
+                p.sendMessage(ChatColor.AQUA + "You have been healed.");
+                return true;
+            } else {
+                if (args.length == 0) {
+                    commandSender.sendMessage(ChatColor.RED + "Correct usage: /heal [player]");
+                    return false;
+                }
+
+                if (Bukkit.getPlayer(args[0]).isOnline()) {
+                    Player player = Bukkit.getPlayer(args[0]);
+                    player.setHealth(20);
+                    commandSender.sendMessage(ChatColor.AQUA + player.getName() + " was healed.");
+                } else {
+                    commandSender.sendMessage(ChatColor.RED + "The player " + args[0] + " is not online. Please try again...");
+                    return false;
+                }
+
+            }
+            return true;
     }
 }

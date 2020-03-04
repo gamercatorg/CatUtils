@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 
 /** Handles the fly command.
  * @author GamerCat Meow
- * @version 1.7
+ * @version %I%, %G%
  * @since 1.0
  */
 public class FlyCommand implements CommandExecutor {

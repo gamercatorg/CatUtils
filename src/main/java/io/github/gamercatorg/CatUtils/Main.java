@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 /** Main class
  * @author GamerCat Meow
- * @version 1.6
+ * @version %I%, %G%
  * @since 1.0
  */
 public class Main extends JavaPlugin {

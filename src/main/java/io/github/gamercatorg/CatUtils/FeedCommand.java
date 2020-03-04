@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 
 /** Handles the /feed command.
  * @author GamerCat Meow
- * @version 1.6
+ * @version %I%, %G%
  * @since 1.0
 */
 public class FeedCommand implements CommandExecutor {

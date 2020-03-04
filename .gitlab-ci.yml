@@ -51,4 +51,4 @@ jfrog-deploy:
 central-deploy:
   stage: deploy
   script:
-    - mvn $MAVEN_CLI_OPTS --batch-mode -B clean install deploy #org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=ossrh::default::https://oss.sonatype.org/content/repositories/snapshots -DaltReleaseDeploymentRepository=ossrh::default::https://oss.sonatype.org/service/local/staging/deploy/maven2/
+    - mvn $MAVEN_CLI_OPTS clean install deploy #org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=ossrh::default::https://oss.sonatype.org/content/repositories/snapshots -DaltReleaseDeploymentRepository=ossrh::default::https://oss.sonatype.org/service/local/staging/deploy/maven2/

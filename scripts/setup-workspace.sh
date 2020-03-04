@@ -5,3 +5,5 @@ npm install -g jfrog-cli-go
 gpg --import private.asc
 git config --global user.signingkey 76C07A52ECF60538
 git config --global commit.gpgsign true
+GPG_TTY=$(tty)
+export GPG_TTY

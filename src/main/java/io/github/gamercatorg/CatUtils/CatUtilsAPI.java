@@ -9,11 +9,11 @@ import net.md_5.bungee.api.ChatColor;
 
 /** Handles all functions.
  * @author GamerCat Meow
- * @version 1.6
+ * @version 1.7
  * @since 1.6
 */
 public class CatUtilsAPI {
-    /**
+    /** Handles the feed command.
      * @author GamerCat Meow
      * @param commandSender The command sender
      * @param command The command executed
@@ -43,5 +43,46 @@ public class CatUtilsAPI {
 
             }
             return true;
+    }
+    /** Handles the fly command.
+     * @author GamerCat Meow
+     * @param commandSender the command sender.
+     * @param args The args
+     * @return boolean
+     */
+    public static boolean fly(CommandSender commandSender, String[] args) {
+        if (commandSender instanceof Player && args.length == 0) {
+                Player p = (Player) commandSender;
+                if (!p.getAllowFlight()) {
+                    p.setAllowFlight(true);
+                    p.sendMessage(ChatColor.AQUA + "Fly mode enabled!");
+                    return true;
+                } else {
+                    p.setAllowFlight(false);
+                    p.sendMessage(ChatColor.AQUA + "Fly mode disabled!");
+                    return true;
+                }
+            } else {
+                if (args.length == 0) {
+                    commandSender.sendMessage(ChatColor.RED + "Correct usage: /fly <player>");
+                    return false;
+                }
+
+                if (Bukkit.getPlayer(args[0]).isOnline()) {
+                    Player p = Bukkit.getPlayer(args[0]);
+                    if (!p.getAllowFlight()) {
+                        p.setAllowFlight(true);
+                        commandSender.sendMessage(ChatColor.AQUA + "Flight mode enabled for player " + p.getName());
+                    } else {
+                        p.setAllowFlight(false);
+                        commandSender.sendMessage(ChatColor.AQUA + "Flight mode disabled for player " + p.getName());
+                    }
+                } else {
+                    commandSender.sendMessage(ChatColor.RED + "The player " + args[0] + " is not online. Please try again...");
+                    return false;
+                }
+
+            }
+        return false;
     }
 }

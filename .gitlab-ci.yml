@@ -9,7 +9,7 @@ before_script:
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode -Dsettings.security=.m2/settings-security.xml"
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-  VERSION: v1.3.6
+  VERSION: v1.3.7
 
 cache:
   paths:
@@ -38,6 +38,8 @@ tray-deploy:
   script:
     - chmod +x ./scripts/tray-deploy.sh
     - ./scripts/tray-deploy.sh $VERSION
+  only:
+    - master
 
 # jfrog-deploy:
 #   stage: deploy
@@ -52,3 +54,5 @@ central-deploy:
   stage: deploy
   script:
     - mvn $MAVEN_CLI_OPTS clean install deploy #org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy -DaltSnapshotDeploymentRepository=ossrh::default::https://oss.sonatype.org/content/repositories/snapshots -DaltReleaseDeploymentRepository=ossrh::default::https://oss.sonatype.org/service/local/staging/deploy/maven2/
+  only:
+    - master

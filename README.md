@@ -1,5 +1,7 @@
 [![Build Status](https://ci.codemc.io/buildStatus/icon?job=gamer4life1%2FCatUtils)](https://ci.codemc.io/job/gamer4life1/job/CatUtils/)
 [![javadoc](https://javadoc.io/badge2/io.github.gamercatorg/CatUtils/javadoc.svg)](https://javadoc.io/doc/io.github.gamercatorg/CatUtils)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=gamercatorg/CatUtils)](https://dependabot.com)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.gamercatorg/CatUtils.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.gamercatorg%22%20AND%20a:%22CatUtils%22)
 
 # CatUtils
 

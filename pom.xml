@@ -3,7 +3,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>io.github.gamercatorg</groupId>
    <artifactId>CatUtils</artifactId>
-   <version>1.4.0</version>
+   <version>1.4.0-SNAPSHOT</version>
    <name>CatUtils</name>
     <description>A variety of useful Spigot commands.</description>
     <url>https://github.com/gamercatorg/catutils</url>
@@ -25,18 +25,28 @@
         </developer>
     </developers>
    <repositories>
-      <repository>
+      <!-- <repository>
          <id>spigotmc-repo</id>
          <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+      </repository> -->
+      <repository>
+        <id>papermc</id>
+        <url>https://papermc.io/repo/repository/maven-public/</url>
       </repository>
    </repositories>
    <dependencies>
-      <dependency>
+       <dependency>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+      <!-- <dependency>
          <groupId>org.spigotmc</groupId>
          <artifactId>spigot-api</artifactId>
          <version>1.15.2-R0.1-SNAPSHOT</version>
          <scope>provided</scope>
-      </dependency>
+      </dependency> -->
       <!-- junit 5, unit test -->
       <dependency>
          <groupId>org.junit.jupiter</groupId>

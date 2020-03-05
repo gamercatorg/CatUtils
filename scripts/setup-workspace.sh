@@ -8,3 +8,4 @@ git config --global commit.gpgsign true
 GPG_TTY=$(tty)
 export GPG_TTY
 export MVN_CLI_OPTS="-s .m2/settings.xml --batch-mode -Dsettings.security=.m2/settings-security.xml"
+gpg --send-keys 76B303AF7A92D4EE8061CD0376C07A52ECF60538

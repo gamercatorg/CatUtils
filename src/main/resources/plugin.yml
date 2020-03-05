@@ -1,6 +1,6 @@
 name: CatUtils
 main: io.github.gamercatorg.CatUtils.Main
-version: v1.3.5
+version: v1.3.9
 commands:
   heal:
     description: Heals the player

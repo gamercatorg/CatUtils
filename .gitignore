@@ -29,3 +29,5 @@ hs_err_pid*
 .env
 
 private.asc
+
+scripts/setup-workspace.sh

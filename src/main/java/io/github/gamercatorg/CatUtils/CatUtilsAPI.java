@@ -13,6 +13,13 @@ import net.md_5.bungee.api.ChatColor;
  * @since 1.6
 */
 public class CatUtilsAPI {
+
+    /** Gets the name of the plugin.
+     * @return The name of the plugin
+     */
+    public static String getName() {
+        return "CatUtils";
+    }
     /** Handles the feed command.
      * @author GamerCat Meow
      * @param commandSender The command sender

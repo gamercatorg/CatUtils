@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
-        getLogger().info("CatUtils has been enabled!");
+        getLogger().info(CatUtilsAPI.getName() + " has been enabled!");
         this.getCommand("heal").setExecutor(new HealCommand());
         this.getCommand("feed").setExecutor(new FeedCommand());
         this.getCommand("fly").setExecutor(new FlyCommand());
@@ -18,6 +18,6 @@ public class Main extends JavaPlugin {
     }
     @Override
     public void onDisable() {
-        getLogger().info("CatUtils has been disabled!");
+        getLogger().info(CatUtilsAPI.getName() + " has been disabled!");
     }
 }

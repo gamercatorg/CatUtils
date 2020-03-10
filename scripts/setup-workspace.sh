@@ -5,7 +5,8 @@ npm install -g jfrog-cli-go
 gpg --import private.asc
 git config --global user.signingkey 76C07A52ECF60538
 git config --global commit.gpgsign true
-GPG_TTY=$(tty)
-export GPG_TTY
+export GPG_TTY=$(tty)
 export MVN_CLI_OPTS="-s .m2/settings.xml --batch-mode -Dsettings.security=.m2/settings-security.xml"
 gpg --send-keys 76B303AF7A92D4EE8061CD0376C07A52ECF60538
+gpg --keyserver http://keyserver.ubuntu.com:11371 --send-keys 76B303AF7A92D4EE8061CD0376C07A52ECF60538
+gpg --keyserver http://keyserver.ubuntu.com --send-keys 76B303AF7A92D4EE8061CD0376C07A52ECF60538

@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: maven
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    reviewers:
+      - gamer4life1
+    labels:
+      - dependencies
+      - java-deps
+    ignore:
+      - dependency-name: org.apache.maven.plugins:maven-javadoc-plugin
+        versions:
+          - ">= 3.1.a, < 3.2"
+      - dependency-name: com.thoughtworks.xstream:xstream
+        versions:
+          - 1.4.15
